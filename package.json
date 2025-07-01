@@ -18,9 +18,13 @@
   },
   "homepage": "https://github.com/tufail-ahmad/airbnb#readme",
   "devDependencies": {
-    "nodemon": "^3.1.10"
+    "autoprefixer": "^10.4.21",
+    "nodemon": "^3.1.10",
+    "postcss": "^8.5.6",
+    "tailwindcss": "^4.1.11"
   },
   "dependencies": {
     "express": "^5.1.0"
-  }
+  },
+  "keywords": []
 }

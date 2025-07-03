@@ -6,12 +6,14 @@ const path = require("path");
 const express = require("express");
 
 // Internal Module
-const router = require("./routes/router");
 const rootdir = require("./utils/path");
+const userRouter = require("./routes/userRouter");
 
 const app = express();
+app.set("view engine", "ejs");
+app.set("views", "views");
 
-app.use(router);
+app.use(userRouter);
 
 app.use(express.static(path.join(rootdir, "public")));
 

@@ -1,15 +1,21 @@
-// Core Module
-const path = require("path");
-
 // External Module
 const express = require("express");
 const userRouter = express.Router();
 
-// Internal Module
-const rootdir = require("../utils/path");
-
 userRouter.get("/", (req, res, next) => {
-  res.sendFile(path.join(rootdir, "views", "index.html"));
+  res.render("index");
+});
+
+userRouter.get("/listings", (req, res, next) => {
+  res.render("store/home-list");
+});
+
+userRouter.get("/favourites", (req, res, next) => {
+  res.render("store/favourite");
+});
+
+userRouter.get("/bookings", (req, res, next) => {
+  res.render("store/bookings");
 });
 
 module.exports = userRouter;
